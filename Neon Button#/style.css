@@ -1,0 +1,102 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Ubuntu:ital,wght@0,400;1,300&display=swap');
+
+  :root{
+
+    --dark : #090d25;
+    --cyan : #00fff0;
+    --cyan-2 : #00fff070;
+    --redpink : #ff005c;
+    --redpink-2 : #ff005c70;
+  }
+
+  *,
+  ::before,
+  ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
+  }
+
+  .container{
+    height: 100vh;
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .btn{
+    position: relative;
+    font-size: 1.3rem;
+    padding: 1rem 0.5rem;
+    width: 18rem;
+    background-color: transparent;
+    border-width: 0.3rem;
+    border-style: solid;
+    border-radius: 0.7rem;
+    cursor: pointer;
+  }
+
+  .btn,
+  .btn::before,
+  .btn::after{
+    transition: filter,box-shadow,color,background-color 200ms ease-in-out;
+  }
+
+  .btn::before{
+
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: -4.5rem;
+    transform: perspective(5rem) rotateX(50deg) scaleY(0.7);
+    filter: blur(2rem);
+  }
+
+
+  .btn-1{
+    color: var(--cyan);
+    border-color: var(--cyan);
+    text-shadow: 0 0 0.5rem var(--cyan);
+    box-shadow: inset 0 0 1rem var(--cyan), 0 0 1rem var(--cyan);
+  }
+
+  .btn-1::before{
+    background-color: var(--cyan-2);
+  }
+
+  .btn-1:hover{
+    color: var(--dark);
+    background-color: var(--cyan);
+    box-shadow: 0 0 4rem var(--cyan);
+  }
+
+  .btn-1:hover::before{
+    background-color: var(--cyan);
+  }
+
+  .btn-2{
+    color: var(--redpink);
+    border-color: var(--redpink);
+    text-shadow: 0 0 0.5rem var(--redpink);
+    box-shadow: inset 0 0 1rem var(--redpink), 0 0 1rem var(--redpink);
+  }
+
+  .btn-2::before{
+    background-color: var(--redpink);
+  }
+
+  .btn-2:hover{
+    color: var(--redpink);
+    background-color: var(--redpink);
+    box-shadow: 0 0 4rem var(--redpink);
+  }
+
+  .btn-2:hover::before{
+    background-color: var(--redpink);
+  }
+
